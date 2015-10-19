@@ -46,3 +46,8 @@ git clone https://github.com/AnkMak/profile
 cat profile/.vimrc >> /etc/vimrc
 cp /etc/X11/xinit/xinitrc /etc/X11/xinit/xinitrc_backup
 cp profile/.xinitrc >> /etc/X11/xinit/xinitrc
+cp -r profile/.config /home/ank/
+cp -r profile/.i3 /home/ank/
+cp -r profile/photo /home/ank/
+cp profile/.zprofile /home/ank/
+cp profile/.zshrc /home/ank/
