@@ -1,3 +1,6 @@
+xrandr --output LVDS-0 --mode 1366x768
+xrandr --output VGA-0 --mode 1440x900
+xrandr --output VGA-0 --right-of LVDS-0
 /home/ank/.wallpaper.sh &
 #export LANG=zh_TW.UTF-8
 export GTK_IM_MODULE=ibus
