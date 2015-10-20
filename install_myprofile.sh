@@ -7,6 +7,10 @@
 #################################################
 
 #!/bin/bash
+#-------------------add user--------------------#
+useradd -m ank
+passwd ank
+visudo
 #---------------- 安裝基本套件 -----------------#
 echo '[archlinuxfr]' >> /etc/pacman.conf
 echo 'SigLevel = Never' >> /etc/pacman.conf
@@ -39,15 +43,17 @@ systemctl enable netctl-auto@wlp5s0b1.service
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 chsh -s $(which zsh) $(whoami)
 chsh -s $(which zsh) ank
-cp -r .oh-my-zsh /home/ank/
+cp -r /root/.oh-my-zsh /home/ank/
 
 #--------------------Git------------------------#
-git clone https://github.com/AnkMak/profile
-cat profile/.vimrc >> /etc/vimrc
+#git clone https://github.com/AnkMak/profile
+cat .vimrc >> /etc/vimrc
+#cp getty@tty1.service /etc/systemd/system/getty.target.wants/
 cp /etc/X11/xinit/xinitrc /etc/X11/xinit/xinitrc_backup
-cp profile/.xinitrc >> /etc/X11/xinit/xinitrc
-cp -r profile/.config /home/ank/
-cp -r profile/.i3 /home/ank/
-cp -r profile/photo /home/ank/
-cp profile/.zprofile /home/ank/
-cp profile/.zshrc /home/ank/
+cp .xinitrc /etc/X11/xinit/xinitrc
+cp -r .config /home/ank/
+cp -r .i3 /home/ank/
+cp -r photo /home/ank/
+cp .wallpaper.sh /home/ank/
+cp .zprofile /home/ank/
+cp .zshrc /home/ank/
