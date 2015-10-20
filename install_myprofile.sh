@@ -41,19 +41,26 @@ systemctl enable netctl-auto@wlp5s0b1.service
 
 #-------------------use Zsh---------------------#
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-chsh -s $(which zsh) $(whoami)
+#chsh -s $(which zsh) $(whoami)
 chsh -s $(which zsh) ank
 cp -r /root/.oh-my-zsh /home/ank/
+chown -R ank:ank /home/ank/.oh-my-zsh
 
 #--------------------Git------------------------#
 #git clone https://github.com/AnkMak/profile
 cat .vimrc >> /etc/vimrc
-#cp getty@tty1.service /etc/systemd/system/getty.target.wants/
+cp getty@tty1.service /etc/systemd/system/getty.target.wants/
 cp /etc/X11/xinit/xinitrc /etc/X11/xinit/xinitrc_backup
 cp .xinitrc /etc/X11/xinit/xinitrc
 cp -r .config /home/ank/
+chown -R ank:ank /home/ank/.config
 cp -r .i3 /home/ank/
+chown -R ank:ank /home/ank/.i3
 cp -r photo /home/ank/
+chown -R ank:ank /home/ank/photo
 cp .wallpaper.sh /home/ank/
+chown ank:ank /home/ank/.wallpaper.sh
 cp .zprofile /home/ank/
+chown ank:ank /home/ank/.zprofile
 cp .zshrc /home/ank/
+chown ank:ank /home/ank/.zshrc
