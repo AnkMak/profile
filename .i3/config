@@ -149,6 +149,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+bindsym Control+space exec "ibus-daemon &"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

@@ -9,7 +9,7 @@ export QT_IM_MODULE=ibus
 export XIM=ibus
 export XIM_PROGRAM=ibus
 
-ibus-daemon &
+#ibus-daemon &
 
 #xcompmgr -c &
 #devilspie -a &
