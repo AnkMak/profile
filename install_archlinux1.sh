@@ -1,10 +1,10 @@
 #!/bin/bash
-mkfs.ext4 /dev/sda3
 mkfs.ext4 /dev/sda5
+mkfs.ext4 /dev/sda6
 
-mount /dev/sda3 /mnt
+mount /dev/sda5 /mnt
 mkdir /mnt/home
-mount /dev/sda5 /mnt/home
+mount /dev/sda6 /mnt/home
 
 pacstrap /mnt base base-devel vim
 
