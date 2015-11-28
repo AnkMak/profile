@@ -67,3 +67,7 @@ cp ~/profile/.zprofile /home/ank/
 chown ank:ank /home/ank/.zprofile
 cp ~/profile/.zshrc /home/ank/
 chown ank:ank /home/ank/.zshrc
+wget http://mimosa-pudica.net/src/incr-0.2.zsh
+mkdir /home/ank/.oh-my-zsh/plugins/incr
+mv incr-0.2.zsh /home/ank/.oh-my-zsh/plugins/incr/
+chown ank:ank /home/ank/.on-my-zsh/plugins/incr/incr-0.2.zsh
