@@ -42,8 +42,8 @@ systemctl enable netctl-auto@wlp5s0b1.service
 #-------------------use Zsh---------------------#
 #sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 #chsh -s $(which zsh) $(whoami)
-git clone git://github.com/robbyrussell/oh-my-zs ~/.oh-my-zsh
-cp ~/.zsh ~/.zshrc.orig
+git clone git://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+cp ~/.zshrc ~/.zshrc.backup
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s $(which zsh) ank
 cp -r /root/.oh-my-zsh /home/ank/
