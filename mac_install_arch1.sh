@@ -1,15 +1,34 @@
 #!/bin/bash
-mkfs.ext4 /dev/sda5
-mkfs.ext4 /dev/sda6
+#-----git-----#
+#git clone https://github.com/ankmak/profile
 
-mount /dev/sda5 /mnt
+#-----Connect to the internet-----#
+#ip lnk
+#wifi-menu
+
+#-----Partition the disks-----#
+#fdisk -l
+#fdisk /dev/nvme0n1
+###Please google how to use fdisk command
+
+#-----Format the partitions-----#
+mkfs.vfat /dev/nvme0n1p4
+mkfs.ext4 /dev/nvme0n1p5
+mkfs.ext4 /dev/nvme0n1p6
+
+#-----Mount the file systems-----#
+mount /dev/nvme0n1p5 /mnt
+mkdir /mnt/boot
 mkdir /mnt/home
-mount /dev/sda6 /mnt/home
+mount /dev/nvme0n1p4 /mnt/boot
+mount /dev/nvme0n1p6 /mnt/home
 
+#-----Installation-----#
 pacstrap /mnt base base-devel vim
 
+#-----Fstab-----#
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
-cp install_archlinux2.sh /mnt/
+cp mac_install_arch2.sh /mnt/
 
 arch-chroot /mnt /bin/bash
