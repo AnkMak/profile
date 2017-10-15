@@ -24,7 +24,7 @@ passwd
 mkdir /boot/efi
 pacman -S --noconfirm grub
 pacman -S --noconfirm efibootmgr
-grub-install --target=x86_64efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck --debug
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck --debug
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/backup.efi
 mkdir /boot/efi/EFI/BOOT
 mount LABEL=EFI /boot/efi
