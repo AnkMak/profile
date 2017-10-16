@@ -2,6 +2,9 @@
 #-----check partition-----#
 #df -Th
 
+#-----Time Zone-----#
+ln -sf /usr/share/zoneinfo/Asia/Macau /etc/localtime
+
 #-----Network Configuration-----#
 pacman -S --noconfirm iw wpa_supplicant dialog
 
